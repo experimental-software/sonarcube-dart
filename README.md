@@ -66,7 +66,7 @@ sonar.exclusions='**/*.js,**/*.html,**/*.yaml'
 
 ### Start import
 
-Now import of the project can be started like this:
+Now the import of the project can be started like this:
 
 ```
 cd $YOUR_DART_PROJECT
