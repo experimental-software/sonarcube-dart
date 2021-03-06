@@ -2,14 +2,14 @@
 
 This repository contains a custom SonarCube Docker image which contains a Dart plugin.
 
-## Usage
+## Dependencies
 
-### Start SonarCube
+To use this tool, it is expected that the following command-line tools are installed:
 
-```
-docker run --env ES_JAVA_OPTS="-Xms1024m -Xmx1024m" -d -p 9000:9000 -p 9092:9092 \
-  experimentalsoftware/sonarqube-dart:0.2
-```
+### Docker
+
+See https://www.docker.com
+>>>>>>> a15a0d8bd1d24005a7e51e971e26ec11aa65ccac
 
 ### Sonar Scanner
 
@@ -41,7 +41,16 @@ PATH="$PATH:~/bin/sonar-scanner-3.3.0.1492-linux/bin"
 
 See https://binaries.sonarsource.com/Distribution/sonar-scanner-cli for the latest version.
 
-### Config
+## Usage
+
+### Start SonarCube
+
+```
+docker run --env ES_JAVA_OPTS="-Xms1024m -Xmx1024m" -d -p 9000:9000 -p 9092:9092 \
+  experimentalsoftware/sonarqube-dart:0.2
+```
+
+### Add project configuration
 
 Now, create a file named `sonar-project.properties` at the root of your Dart project.
 It should have the following contents:
@@ -58,7 +67,7 @@ sonar.exclusions='**/*.js,**/*.html,**/*.yaml'
 
 ### Start import
 
-Now import of the project can be started like this:
+Now the import of the project can be started like this:
 
 ```
 cd $YOUR_DART_PROJECT
