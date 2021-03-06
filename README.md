@@ -8,7 +8,7 @@ This repository contains a custom SonarCube Docker image which contains a Dart p
 
 ```
 docker run --env ES_JAVA_OPTS="-Xms1024m -Xmx1024m" -d -p 9000:9000 -p 9092:9092 \
-  experimentalsoftware/sonarqube-dart:0.1
+  experimentalsoftware/sonarqube-dart:0.2
 ```
 
 ### Sonar Scanner
